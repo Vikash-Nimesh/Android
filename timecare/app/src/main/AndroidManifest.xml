@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.gurulabs.timecare">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        android:icon="@mipmap/ic_launcher_adaptive_fore"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_adaptive_fore"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TimeCare">
+        <activity
+            android:name="in.gurulabs.timecare.activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="in.gurulabs.timecare.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="in.gurulabs.timecare.activity.AlarmActivity"
+            android:exported="true"
+            android:theme="@style/Transparent" />
+
+        <activity
+            android:name="in.gurulabs.timecare.activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="in.gurulabs.timecare.activity.CreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.gurulabs.timecare.activity.UpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.gurulabs.timecare.activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+
+        <receiver android:name="in.gurulabs.timecare.receiver.DailyReceiver" />
+        <receiver
+            android:name="in.gurulabs.timecare.receiver.RebootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="in.gurulabs.timecare.receiver.AlarmStopReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service android:name="in.gurulabs.timecare.service.AlarmService" />
+    </application>
+
+</manifest>
