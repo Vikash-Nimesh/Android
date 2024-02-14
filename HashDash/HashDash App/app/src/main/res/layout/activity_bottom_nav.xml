@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BottomNav.BottomNavActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bar_background"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/home_LL"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="6dp"
+            android:gravity="center"
+            android:background="@drawable/item_selector_figma"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/home"
+                />
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/almarai_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"
+                android:text="Home"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/points_LL"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="6dp"
+            android:gravity="center"
+            android:background="@drawable/item_selector_figma_transparent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:id="@+id/pointsIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/moneys"
+                app:tint="@color/white" />
+            <TextView
+                android:id="@+id/pointsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/almarai_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"
+                android:text="Points"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/order_LL"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="6dp"
+            android:gravity="center"
+            android:background="@drawable/item_selector_figma_transparent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:id="@+id/ordersIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/order"
+                app:tint="@color/white"
+                />
+            <TextView
+                android:id="@+id/ordersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Orders"
+                android:fontFamily="@font/almarai_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_LL"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:gravity="center"
+            android:background="@drawable/item_selector_figma_transparent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/user"
+                app:tint="@color/white"
+                />
+            <TextView
+                android:id="@+id/profileText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Profile"
+                android:fontFamily="@font/almarai_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
