@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.notetakingapp"
+    namespace = "com.gurulabs.notificationsender"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.notetakingapp"
+        applicationId = "com.gurulabs.notificationsender"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
